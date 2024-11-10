@@ -46,10 +46,10 @@ SET warU = $whNm || '_WU_AR';  -- Monitor & Usage
 SET warO = $whNm || '_WO_AR';  -- Operate & Modify (so WH can be resized operationally if needed)
 
 
----------------------------------------------------------------------------------
--- build_schema.sql is a generic script that creates any schema:
-EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/build_schema.sql;
----------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------------
+-- -- build_schema.sql is a generic script that creates any schema:
+-- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/build_schema.sql;
+-- ---------------------------------------------------------------------------------
 
 
 USE ROLE USERADMIN; 
