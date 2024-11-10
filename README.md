@@ -34,6 +34,13 @@ A commit to Github [triggers main.yml](/.github/workflows/main.yml).  main.yml c
 ## Database Notes
 ![alt text](.images/db_image.png)
 
+## Fnally,about logging!
+
+I need at least basic logging with this EXECUTE IMMEDIATE FROM approach -both fail & success. i get a decent clue most times where to look on a failure. but successes (especially nested EIF calls) all i get is the name of the last step that succeeded. 
+
+Maybe Snowflake Trail? i have not had a chance to see if that gives me anyrhing useful in this case.
+
+Thanks for the assist and any comments about any of this! Especially about my overall approach!
 
 
 
