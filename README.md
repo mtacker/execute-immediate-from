@@ -57,6 +57,8 @@ mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/gold
 -- mkdir results in this:  
 ![Resulting Directory Structure](./.images/directoryStructure.png)
 
+![Our Current Directory Structure](./.images/actualDirectoryStructure.png)
+
 
 
 
