@@ -45,12 +45,15 @@ Thanks for the assist and any comments about any of this! Especially about my ov
 
 
 --------------------------------------------------------------
--- Build my directories this way:
+-- Build my directories this way:  
+
 mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/bronze/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};
 
 mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/silver/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};
 
-mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/gold/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};
+mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/gold/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};  
+
+
 -- mkdir results in this:  
 ![Resulting Directory Structure](./.images/directoryStructure.png)
 
