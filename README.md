@@ -45,17 +45,17 @@ Maybe Snowflake Trail? i have not had a chance to see if that gives me anyrhing 
 Thanks for the assist and any comments about any of this! Especially about my overall approach!
 
 --------------------------------------------------------------  
+## My Directory Structure 
+
+
+- My local directory structure is based on the Snowflake Object Hierarchy:  
+
+<!-- ```
+mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/alerts/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};  
+``` -->
+- 
+![Resulting Directory Structure](./.images/directoryStructure.png)
 
 ![Snowflake Object Hierarchy](./.images/snowflakeObjectHierarchy.png)
 
-
--- My local directory structure is based on the Snowflake Object Hierarchy:  
-
-mkdir -p ./apps/adm_control/{snowflake_objects/databases/adm_control_db/schemas/alerts/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};  
-
-
-![Resulting Directory Structure](./.images/directoryStructure.png)
-
 ![Our Current Directory Structure](./.images/actualDirectoryStructure.png)
-
-
