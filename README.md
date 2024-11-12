@@ -53,6 +53,9 @@ mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/silv
 
 mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/gold/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};  
 
+-- ToDo: Put the adm_control_db code in this directory structure:  
+mkdir -p ./apps/adm_control/{snowflake_objects/databases/adm_control_db/schemas/deploy_schema/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};  
+
 
 -- mkdir results in this:  
 ![Resulting Directory Structure](./.images/directoryStructure.png)
