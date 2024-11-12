@@ -22,18 +22,17 @@
 -- Approach 2 - Separate SET variables FROM the build code
 --------------------------------------------------------------------------------------------
 -- tags.sql SUCCEEDS
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/tags/tags.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/tags/tags.sql;
 
 -- Alerts.sql FAILS with:
 --
 -- Uncaught exception of  │
 -- │ type 'STATEMENT_ERROR' in file                                               │
--- │ @SNOWFLAKE_GIT_REPO/branches/master/apps/sf_deploy_prd.sql on line 21 at     │
+-- │ @SNOWFLAKE_GIT_REPO/branches/master/apps/sf_deploy_prd.sql on line 37 at     │
 -- │ position 0:                                                                  │
 -- │ Cannot perform operation. This session does not have a current database.     │
 -- │ Call 'USE DATABASE', or use a qualified name.   
 -- *******************************************************************************
-EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/tags/tags.sql;
 EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/alerts/alerts.sql;
 --------------------------------------------------------------------------------------------
 
