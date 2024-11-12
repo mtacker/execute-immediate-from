@@ -48,14 +48,17 @@ Thanks for the assist and any comments about any of this! Especially about my ov
 ## My Directory Structure 
 
 
-- My local directory structure is based on the Snowflake Object Hierarchy:  
+- Proposed directory structure is based on the Snowflake Object Hierarchy:  
 
 <!-- ```
 mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/alerts/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};  
 ``` -->
-- 
-![Resulting Directory Structure](./.images/directoryStructure.png)
+
 
 ![Snowflake Object Hierarchy](./.images/snowflakeObjectHierarchy.png)
 
+For Example:  
+![Resulting Directory Structure](./.images/directoryStructure.png)
+
+Actual:
 ![Our Current Directory Structure](./.images/actualDirectoryStructure.png)
