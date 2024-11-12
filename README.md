@@ -38,9 +38,9 @@ A commit to Github [triggers main.yml](/.github/workflows/main.yml).  main.yml c
 
 ## Logging question
 
-I need at least basic logging with this EXECUTE IMMEDIATE FROM approach -both fail & success. i get a decent clue most times where to look on a failure. but successes (especially nested EIF calls) all i get is the name of the last step that succeeded. 
+I need at least basic logging with this EXECUTE IMMEDIATE FROM approach -both fail & success. I get a good clue most times where to look on a failure. But successes (especially nested EIF calls) all I get is the name of the last step that succeeded. 
 
-Maybe Snowflake Trail? i have not had a chance to see if that gives me anyrhing useful in this case.
+Maybe Snowflake Trail? I have not had a chance to see if that gives me anything useful in this case.
 
 Thanks for the assist and any comments about any of this! Especially about my overall approach!
 
