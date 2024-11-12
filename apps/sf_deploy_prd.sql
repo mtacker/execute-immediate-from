@@ -12,10 +12,10 @@
 
 --------------------------------------------------------------------------------------------
 -- Approach 1 - Include SET variables WITH the build code  
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/tags/tags_build.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/tags/tags_build.sql;
 -- Results in error:
 -- "Unsupported feature 'session variables not supported during object dependencies backfill"
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/alerts/alerts_build.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/alerts/alerts_build.sql;
 --------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snow
 --
 -- Uncaught exception of  │
 -- │ type 'STATEMENT_ERROR' in file                                               │
--- │ @SNOWFLAKE_GIT_REPO/branches/master/apps/sf_deploy_prd.sql on line 37 at     │
+-- │ @SNOWFLAKE_GIT_REPO/branches/master/apps/sf_deploy_prd.sql on line 36 at     │
 -- │ position 0:                                                                  │
 -- │ Cannot perform operation. This session does not have a current database.     │
 -- │ Call 'USE DATABASE', or use a qualified name.   
