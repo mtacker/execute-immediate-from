@@ -43,7 +43,6 @@ Maybe Snowflake Trail? i have not had a chance to see if that gives me anyrhing 
 Thanks for the assist and any comments about any of this! Especially about my overall approach!
 
 
-
 --------------------------------------------------------------
 -- Build my directories this way:  
 
