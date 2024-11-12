@@ -12,7 +12,7 @@
 
 --------------------------------------------------------------------------------------------
 -- Approach 1 - Include SET variables WITH the build code: 
-EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/tags_schema/tags_build.sql;
+-- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/tags_schema/tags_build.sql;
 -- Results in error:
 -- "Unsupported feature 'session variables not supported during object dependencies backfill"
 --------------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snow
 -- Approach 2 - Separate SET variables FROM the build code
 --------------------------------------------------------------------------------------------
 -- tags.sql SUCCEEDS
-EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/tags_schema/tags.sql;
+-- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/tags_schema/tags.sql;
 
 -- Alerts.sql FAILS with:
 --
@@ -32,7 +32,7 @@ EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snow
 -- │ Cannot perform operation. This session does not have a current database.     │
 -- │ Call 'USE DATABASE', or use a qualified name.   
 -- *********************************************************
-EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/alerts_schema/alerts.sql;
+-- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/alerts_schema/alerts.sql;
 
 --------------------------------------------------------------------------------------------
 
@@ -42,14 +42,19 @@ EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snow
 
 -- The rest of my proposed orchestration would look like this:
 
--- -- TABLES 
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO (TABLE 1)
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO (TABLE 2)
+-- TABLES
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/bronze/tables/Customer.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/bronze/tables/Orders.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/bronze/tables/Product.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/silver/tables/Customer.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/silver/tables/Orders.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/silver/tables/Product.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/gold/tables/Shipping.sql;
+ 
+-- VIEWS
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/bronze/views/Customer_Orders.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/silver/views/Customer_Orders.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/silver/views/Product_Inventory.sql;
 
--- -- VIEWS
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO (VIEW 1)
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO (VIEW 2)
-
--- -- PROCEDURES
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO (PROC 1)
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO (PROC 2)
+-- PROCEDURES
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/fin_sales/snowflake_objects/databases/fin_sales_db/schemas/bronze/storedProcedures/Load_Bronze_Customer_Orders.sql;

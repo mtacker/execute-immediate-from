@@ -1,0 +1,13 @@
+CREATE OR REPLACE VIEW fin_sales_db.bronze.Customer_Orders AS
+SELECT
+	C_CUSTKEY,
+	C_NAME,
+	C_ADDRESS,
+	C_NATIONKEY,
+	C_PHONE
+	-- C_ACCTBAL,
+	-- C_MKTSEGMENT,
+	-- C_COMMENT
+FROM
+    Customer c
+    JOIN Orders o ON c.C_CUSTKEY = o.O_CUSTKEY;
