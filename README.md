@@ -48,7 +48,7 @@ Thanks for the assist and any comments about any of this! Especially about my ov
 ## Directory Structure 
 
 
-Proposed directory structure is based on the Snowflake Object Hierarchy:  
+Proposed directory structure is inpired by the Snowflake Object Hierarchy:  
 
 <!-- ```
 mkdir -p ./apps/fin_sales/{snowflake_objects/databases/fin_sales_db/schemas/alerts/{externalTables,fileFormats,maskingPolicies,pipes,stages,streams,tables,tasks,views,sequences,storedProcedures,udfs,streams,tasks},scripts};  
