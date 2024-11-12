@@ -21,7 +21,7 @@
 -- Approach 2 - Separate SET variables FROM the build code
 --------------------------------------------------------------------------------------------
 -- tags.sql SUCCEEDS
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/tags_schema/tags.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/tags_schema/tags.sql;
 
 -- Alerts.sql FAILS with:
 --
@@ -32,7 +32,7 @@
 -- │ Cannot perform operation. This session does not have a current database.     │
 -- │ Call 'USE DATABASE', or use a qualified name.   
 -- *********************************************************
--- EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/alerts_schema/alerts.sql;
+EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/schemas/alerts_schema/alerts.sql;
 
 --------------------------------------------------------------------------------------------
 
