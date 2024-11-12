@@ -30,7 +30,7 @@
 
 SET beNm = 'ADM';        -- Business Entity / Segment
 SET dbNm = 'CONTROL';    -- Database Name
-SET scNm = 'DEPLOY_SCHEMA';     -- Schema Name
+SET scNm = 'DEPLOY';     -- Schema Name
 
 -- construct the database name and delegated admin role
 SET prefixNm = $beNm;

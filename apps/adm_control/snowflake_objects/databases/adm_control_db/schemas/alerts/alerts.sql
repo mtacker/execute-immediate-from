@@ -16,7 +16,7 @@
 
 SET beNm = 'ADM';               -- Business Entity / Segment
 SET dbNm = 'CONTROL';           -- Database Name
-SET scNm = 'ALERTS_SCHEMA';     -- Schema Name
+SET scNm = 'ALERTS';     -- Schema Name
 
 -- construct the database name and delegated admin role
 SET prefixNm = $beNm;
