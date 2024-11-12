@@ -73,4 +73,3 @@ mkdir -p ./apps/adm_control/{snowflake_objects/databases/adm_control_db/schemas/
 
 
 
-
