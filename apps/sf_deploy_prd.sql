@@ -24,7 +24,6 @@
 -- tags.sql SUCCEEDS
 EXECUTE IMMEDIATE FROM @SNOWFLAKE_GIT_REPO/branches/master/apps/adm_control/snowflake_objects/databases/adm_control_db/schemas/alerts/alerts.sql;
 
-
 -- Alerts.sql FAILS with:
 --
 -- Uncaught exception of  │
