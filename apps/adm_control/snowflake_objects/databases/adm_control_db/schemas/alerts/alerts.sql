@@ -27,10 +27,6 @@ SET publicSchemaNm = $databaseNm || '.' || 'public';
 SET pltfrAdmin  = 'PDE_SYSADMIN_FR';  --- Platform sysadmin,  delegated role granted up to SYSADMIN. Create only once.
 
 SET localfrAdmin  =  $dbNm || '_SYSADMIN_FR';
--- set pltfrTagAdmin = 'PDE_TAGADMIN_FR';  -- Currently, creation of tags are reserved for PDE_TAGADMIN_FR as a security measure.
---                                         -- However, if we decide to change this just grant PDE_TAGADMIN_FR to another role like this:
---                                         -- USE ROLE USERADMIN;
---                                         -- GRANT ROLE PDE_TAGADMIN_FR TO ROLE MYDATAENGINEERROLE;
 
 -- construct the 3 Access Role SCHEMA LEVEL, for Read, Write & Create
 SET sarR =  $dbNm || '_' || $scNm || '_R_AR';  -- READ access role

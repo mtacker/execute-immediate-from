@@ -21,16 +21,7 @@
 ---------------------------------------------------------------
 -- 0. INPUT the components of the names and other parameters
 ---------------------------------------------------------------
-set pltfrTagAdmin = 'PDE_TAGADMIN_FR';  -- PDE_TAGADMIN_FR is a weird one. Not sure of a better solution yet. 
-                                        -- NOTE> PDE_TAGADMIN_FR is not used in this script. It's just here for documentation.
-                                        -- Currently PDE_TAGADMIN_FR needs to be created in an account ONCE and MANUALLY.
-                                        -- before any other roles get created.  Why?
-                                        -- Because it is needed ALREADY by the schema scripts, and BEFORE this FR script runs!
-                                        -- So for each account, first run this (only once otherwise you'll have to re-run all the schema scripts!):
-                                        -- USE ROLE USERADMIN;
-                                        -- CREATE OR REPLACE ROLE PDE_TAGADMIN_FR;
-                                        -- USE ROLE ACCOUNTADMIN;
-                                        -- GRANT APPLY TAG ON ACCOUNT TO ROLE PDE_TAGADMIN_FR;
+
 set pltfrAdmin = 'PDE_SYSADMIN_FR';     -- PDE_SYSADMIN_FR is a Platform admin FR currently created by the schema_setup script.
                                         -- Platform admin can create and drop databases across the entire account.
                                         -- Equates to account sysadmin role but prevents everyone from needing SYSADMIN access!!
@@ -87,9 +78,6 @@ GRANT ROLE IDENTIFIER($dnaAnaR) TO ROLE IDENTIFIER($dnaEngC);
 GRANT ROLE IDENTIFIER($cpgSysAdmin) TO ROLE IDENTIFIER($pltfrAdmin);
 GRANT ROLE IDENTIFIER($cpgEngC) TO ROLE IDENTIFIER($cpgSysAdmin);
 GRANT ROLE IDENTIFIER($cpgAnaR) TO ROLE IDENTIFIER($cpgEngC); 
--- CREATE ROLE HEIRARCHY FOR ADM_CONTROL_DB. 
-
-GRANT ROLE IDENTIFIER($pltfrTagAdmin) TO ROLE SYSADMIN;
 GRANT ROLE IDENTIFIER($mgtSysAdmin) TO ROLE IDENTIFIER($pltfrAdmin);
  
 
